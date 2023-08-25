@@ -1,6 +1,5 @@
 import { useState } from 'react'
 import './App.css'
-import 'bootstrap';
 
 function App() {
   const [percentagePerMonth, setPercentagePerMonth ] = useState<string>('')
@@ -49,21 +48,21 @@ function App() {
     <div id='entire-page'>
       <h3 id='header'>Calcule seus investimentos para o futuro 🚀</h3>
       <div className='investments-content'>
-        <span>Quanto o seu investimento vai render por mês?</span>
+        <span>Quantos % o seu investimento vai render por mês?</span>
         <input 
         type='text' 
         placeholder='insira a %'
         value={percentagePerMonth === '' ? '' : percentagePerMonth + "%"}
         onChange={(event) => handlePercentagePerMonth(event.target.value)}
         ></input>
-        <span>Qual valor deseja colocar todo mês?</span>
+        <span>Qual valor deseja depositar todo mês?</span>
         <input  
         type='text' 
         placeholder='insira o valor em reais'
         value={valuePerMonth === '' ? '' : "R$ " + valuePerMonth }
         onChange={(event) => handleValuePerMonth(event.target.value.replace('R$ ', "").replace('.', ""))}
         ></input>
-        <span>Quanto tempo? (deve existir ao menos 1 campo preenchido para ser calculado)</span>
+        <span>Quanto tempo? (deve ter ao menos 1 campo preenchido para ser calculado)</span>
         <div>
           <span>Messes: </span>
         <input type='text' placeholder='insira o valor'
@@ -79,7 +78,7 @@ function App() {
           onChange={(event) => handleTimePerYear(event.target.value)}
           ></input>
           </div>
-      <h3>{`ao final deste periodo você vai ter acomulado ${calculate()} reais`}</h3>
+      <h3>{`ao final deste período você vai ter acumulado ${calculate()} reais`}</h3>
       </div>
     </div>
   )
