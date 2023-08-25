@@ -50,14 +50,14 @@ function App() {
       <h3 id='header'>Calcule seus investimentos para o futuro 🚀</h3>
       <div className='investments-content'>
         <span>Quanto o seu investimento vai render por mês?</span>
-        <input className='form-control-lg' 
+        <input 
         type='text' 
         placeholder='insira a %'
         value={percentagePerMonth === '' ? '' : percentagePerMonth + "%"}
         onChange={(event) => handlePercentagePerMonth(event.target.value)}
         ></input>
         <span>Qual valor deseja colocar todo mês?</span>
-        <input className='form-control-lg'  
+        <input  
         type='text' 
         placeholder='insira o valor em reais'
         value={valuePerMonth === '' ? '' : "R$ " + valuePerMonth }
@@ -66,7 +66,7 @@ function App() {
         <span>Quanto tempo? (deve existir ao menos 1 campo preenchido para ser calculado)</span>
         <div>
           <span>Messes: </span>
-        <input className='form-control-lg'  type='text' placeholder='insira o valor'
+        <input type='text' placeholder='insira o valor'
           value={timePerMonth}
           onChange={(event) => handleTimePerMonth(event.target.value)}
            ></input>
@@ -74,7 +74,7 @@ function App() {
            <span>e(ou)</span>
         <div>
           <span>Anos:   </span>
-        <input className='form-control-lg' type='text' placeholder='insira o valor'
+        <input type='text' placeholder='insira o valor'
           value={timePerYear}
           onChange={(event) => handleTimePerYear(event.target.value)}
           ></input>
