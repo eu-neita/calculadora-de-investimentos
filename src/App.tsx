@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import './App.css'
+import 'bootstrap';
 
 function App() {
   const [percentagePerMonth, setPercentagePerMonth ] = useState<string>('')
@@ -45,33 +46,40 @@ function App() {
 
 
   return (
-    <div>
-      <h3>Calcule seus investimentos para o futuro 🚀</h3>
-      <div>
-        <span>quanto o seu investimento vai render por mês?</span>
-        <input 
+    <div id='entire-page'>
+      <h3 id='header'>Calcule seus investimentos para o futuro 🚀</h3>
+      <div className='investments-content'>
+        <span>Quanto o seu investimento vai render por mês?</span>
+        <input className='form-control-lg' 
         type='text' 
         placeholder='insira a %'
         value={percentagePerMonth === '' ? '' : percentagePerMonth + "%"}
         onChange={(event) => handlePercentagePerMonth(event.target.value)}
         ></input>
-        <span>qual valor deseja colocar todo mês?</span>
-        <input 
+        <span>Qual valor deseja colocar todo mês?</span>
+        <input className='form-control-lg'  
         type='text' 
         placeholder='insira o valor em reais'
         value={valuePerMonth === '' ? '' : "R$ " + valuePerMonth }
         onChange={(event) => handleValuePerMonth(event.target.value.replace('R$ ', "").replace('.', ""))}
         ></input>
-        <span>quanto tempo?(deve existir ao menos 1 campo preenchido para ser calculado)</span>
-        <input type='text' placeholder='insira o valor em messes'
+        <span>Quanto tempo? (deve existir ao menos 1 campo preenchido para ser calculado)</span>
+        <div>
+          <span>Messes: </span>
+        <input className='form-control-lg'  type='text' placeholder='insira o valor'
           value={timePerMonth}
           onChange={(event) => handleTimePerMonth(event.target.value)}
            ></input>
-        <input type='text' placeholder='insira o valor em anos'
+           </div>
+           <span>e(ou)</span>
+        <div>
+          <span>Anos:   </span>
+        <input className='form-control-lg' type='text' placeholder='insira o valor'
           value={timePerYear}
           onChange={(event) => handleTimePerYear(event.target.value)}
           ></input>
-      <span>{`ao final deste periodo você vai ter acomulado ${calculate()} reais`}</span>
+          </div>
+      <h3>{`ao final deste periodo você vai ter acomulado ${calculate()} reais`}</h3>
       </div>
     </div>
   )
