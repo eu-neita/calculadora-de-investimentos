@@ -1,27 +1,35 @@
-# React + TypeScript + Vite
+# Calcule seus investimentos para o futuro
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![imagem demo](./app-demo-img.png)
 
-Currently, two official plugins are available:
+## Como rodar o projeto
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Siga os passos abaixo para rodar o projeto localmente.
 
-## Expanding the ESLint configuration
+1. Clone o repositório para a sua máquina local usando `git clone`.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+2. Navegue até a pasta do projeto.
 
-- Configure the top-level `parserOptions` property like this:
+3. Instale as dependências do projeto com o seguinte comando:
+    ```
+    npm install
+    ```
 
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
-```
+4. Após a instalação das dependências, você pode iniciar o servidor de desenvolvimento com:
+    ```
+    npm run dev
+    ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+Agora você deve ser capaz de ver o projeto rodando em `localhost:5000 (ou porta que seu vite apontar no terminal)`.
+
+## Construído com
+
+- Vite react-ts
+
+## Contribuição
+
+Pull requests são bem-vindos. Para mudanças importantes, abra uma issue primeiro para discutir o que você gostaria de mudar.
+
+## Licença
+
+MIT
